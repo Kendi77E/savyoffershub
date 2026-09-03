@@ -1,0 +1,362 @@
+/* ============================================================
+   H&M Gift Card landing page
+   Light, clean deal-page style — system fonts, no libraries
+   ============================================================ */
+
+:root {
+  --red: #e50010;          /* H&M red */
+  --red-dark: #c8000e;
+  --page-bg: #f4f5f7;
+  --card-bg: #ffffff;
+  --text: #111111;
+  --muted: #777777;
+  --green: #22c55e;        /* verified check */
+  --tp-green: #00b67a;     /* rating green */
+  --border: #eeeeee;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: var(--page-bg);
+  color: var(--text);
+  line-height: 1.5;
+  padding: 1.25rem 0 0;
+}
+
+::selection {
+  background: var(--red);
+  color: #fff;
+}
+
+/* ---------- Main white card ---------- */
+
+.container {
+  background: var(--card-bg);
+  max-width: 480px;
+  margin: 0 auto 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  padding: 2.25rem 1.25rem 2.5rem;
+  text-align: center;
+}
+
+/* ---------- Header ---------- */
+
+.logo {
+  font-size: 2.1rem;
+  font-weight: 800;
+  font-style: italic;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  color: var(--red);
+  margin-bottom: 0.9rem;
+}
+
+.divider {
+  width: 100%;
+  height: 2px;
+  background: #111111;
+  margin: 0 auto 1.25rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+  margin-bottom: 0.9rem;
+}
+
+.title span {
+  color: var(--red);
+}
+
+.verified-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  border: 1.5px solid var(--border);
+  border-radius: 28px;
+  padding: 0.4rem 1rem;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 2rem;
+}
+
+.check-icon {
+  color: var(--green);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* ---------- How It Works ---------- */
+
+.how-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #9b9b9b;
+  margin-bottom: 1rem;
+}
+
+.steps {
+  list-style: none;
+  display: grid;
+  gap: 0.75rem;
+  margin-bottom: 1.75rem;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  text-align: left;
+  border: 1.5px solid var(--border);
+  border-radius: 12px;
+  padding: 0.9rem 1.1rem;
+  background: var(--card-bg);
+}
+
+.step-number {
+  flex: none;
+  width: 2.1rem;
+  height: 2.1rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--red);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.step-title {
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--text);
+  line-height: 1.25;
+}
+
+/* ---------- CTA button ---------- */
+
+.cta-button {
+  display: block;
+  width: 100%;
+  padding: 1.05rem 1.5rem;
+  background: var(--red);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px -8px rgba(229, 0, 16, 0.5);
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.cta-button:hover {
+  background: var(--red-dark);
+  transform: translateY(-2px);
+}
+
+.cta-button:active {
+  transform: translateY(0);
+}
+
+.cta-button:focus-visible {
+  outline: 3px solid var(--text);
+  outline-offset: 3px;
+}
+
+/* ---------- FAQ ---------- */
+
+.faq {
+  margin-top: 2.5rem;
+  text-align: left;
+}
+
+.faq-title {
+  font-size: 26px;
+  font-weight: 800;
+  text-align: center;
+  color: #222222;
+  margin-bottom: 1.25rem;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--border);
+}
+
+.faq-item:first-of-type {
+  border-top: 1px solid var(--border);
+}
+
+.faq-question {
+  margin: 0;
+}
+
+.faq-question button {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.1rem 0.25rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333333;
+  text-align: left;
+}
+
+.faq-question button:focus-visible {
+  outline: 3px solid var(--text);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+.faq-question button[aria-expanded="true"] {
+  color: var(--red);
+}
+
+.faq-toggle {
+  flex: none;
+  font-size: 11px;
+  color: #aaaaaa;
+  transition: transform 0.2s ease;
+}
+
+.faq-question button[aria-expanded="true"] .faq-toggle {
+  transform: rotate(180deg);
+  color: var(--red);
+}
+
+.faq-answer p {
+  padding: 0 0.25rem 1.1rem;
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* ---------- Footer ---------- */
+
+.footer {
+  background: #fafafa;
+  border-top: 1px solid var(--border);
+  padding: 2.5rem 1.25rem 3rem;
+  text-align: center;
+}
+
+.footer-note {
+  font-size: 14px;
+  color: #aaaaaa;
+  margin-bottom: 0.4rem;
+}
+
+.trustpilot-box {
+  background: var(--card-bg);
+  border: 1.5px solid var(--border);
+  border-radius: 14px;
+  max-width: 20rem;
+  margin: 1.25rem auto;
+  padding: 1.5rem 1rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+.trustpilot-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  margin-bottom: 0.75rem;
+}
+
+.trustpilot-logo-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 1.4rem;
+  height: 1.4rem;
+  background: var(--tp-green);
+  color: #fff;
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+.trustpilot-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: #333333;
+}
+
+.trustpilot-stars {
+  font-size: 26px;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5rem;
+}
+
+.star {
+  color: var(--tp-green);
+}
+
+.trustpilot-excellent {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--tp-green);
+}
+
+.trustpilot-reviews {
+  font-size: 13px;
+  color: #999999;
+  margin-top: 0.2rem;
+}
+
+.footer-disclaimer {
+  font-size: 12px;
+  color: #bbbbbb;
+  margin-top: 0.4rem;
+  max-width: 30rem;
+  margin-inline: auto;
+}
+
+/* ---------- Larger screens ---------- */
+
+@media (min-width: 540px) {
+  body {
+    padding-top: 3rem;
+  }
+
+  .container {
+    padding: 3rem 2.5rem;
+  }
+}
+
+/* ---------- Reduced motion ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}
