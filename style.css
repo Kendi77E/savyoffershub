@@ -1,18 +1,18 @@
 /* ============================================================
-   H&M Gift Card landing page
-   Light, clean deal-page style — system fonts, no libraries
-   ============================================================ */
+  Zara Gift Card landing page
+  Black-and-white editorial style — system fonts, no libraries
+  ============================================================ */
 
 :root {
-  --red: #e50010;          /* H&M red */
-  --red-dark: #c8000e;
-  --page-bg: #f4f5f7;
-  --card-bg: #ffffff;
-  --text: #111111;
-  --muted: #777777;
-  --green: #22c55e;        /* verified check */
-  --tp-green: #00b67a;     /* rating green */
-  --border: #eeeeee;
+  --accent: #ffffff;
+  --accent-hover: #dedede;
+  --page-bg: #080808;
+  --card-bg: #111111;
+  --text: #ffffff;
+  --muted: #b8b8b8;
+  --green: #79d99b;
+  --tp-green: #79d99b;
+  --border: #303030;
 }
 
 *,
@@ -36,18 +36,18 @@ body {
 }
 
 ::selection {
-  background: var(--red);
-  color: #fff;
+  background: var(--accent);
+  color: #000;
 }
 
-/* ---------- Main white card ---------- */
+/* ---------- Main card ---------- */
 
 .container {
   background: var(--card-bg);
   max-width: 480px;
   margin: 0 auto 2.5rem;
-  border-radius: 20px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  border-radius: 0;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.45);
   padding: 2.25rem 1.25rem 2.5rem;
   text-align: center;
 }
@@ -57,17 +57,17 @@ body {
 .logo {
   font-size: 2.1rem;
   font-weight: 800;
-  font-style: italic;
-  letter-spacing: -0.03em;
+  font-family: Georgia, "Times New Roman", serif;
+  letter-spacing: 0.14em;
   line-height: 1;
-  color: var(--red);
+  color: var(--text);
   margin-bottom: 0.9rem;
 }
 
 .divider {
   width: 100%;
   height: 2px;
-  background: #111111;
+  background: var(--border);
   margin: 0 auto 1.25rem;
 }
 
@@ -81,7 +81,7 @@ body {
 }
 
 .title span {
-  color: var(--red);
+  color: var(--text);
 }
 
 .verified-pill {
@@ -110,7 +110,7 @@ body {
   font-weight: 700;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: #9b9b9b;
+  color: var(--muted);
   margin-bottom: 1rem;
 }
 
@@ -127,7 +127,7 @@ body {
   gap: 0.9rem;
   text-align: left;
   border: 1.5px solid var(--border);
-  border-radius: 12px;
+  border-radius: 0;
   padding: 0.9rem 1.1rem;
   background: var(--card-bg);
 }
@@ -138,9 +138,9 @@ body {
   height: 2.1rem;
   display: grid;
   place-items: center;
-  border-radius: 50%;
-  background: var(--red);
-  color: #fff;
+  border-radius: 0;
+  background: var(--accent);
+  color: #000;
   font-size: 18px;
   font-weight: 800;
 }
@@ -158,21 +158,21 @@ body {
   display: block;
   width: 100%;
   padding: 1.05rem 1.5rem;
-  background: var(--red);
-  color: #fff;
+  background: var(--accent);
+  color: #000;
   font-size: 18px;
   font-weight: 800;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   text-align: center;
   text-decoration: none;
-  border-radius: 14px;
-  box-shadow: 0 8px 24px -8px rgba(229, 0, 16, 0.5);
+  border-radius: 0;
+  box-shadow: none;
   transition: background 0.15s ease, transform 0.15s ease;
 }
 
 .cta-button:hover {
-  background: var(--red-dark);
+  background: var(--accent-hover);
   transform: translateY(-2px);
 }
 
@@ -196,7 +196,7 @@ body {
   font-size: 26px;
   font-weight: 800;
   text-align: center;
-  color: #222222;
+  color: var(--text);
   margin-bottom: 1.25rem;
 }
 
@@ -225,7 +225,7 @@ body {
   font: inherit;
   font-size: 16px;
   font-weight: 600;
-  color: #333333;
+  color: var(--text);
   text-align: left;
 }
 
@@ -236,7 +236,7 @@ body {
 }
 
 .faq-question button[aria-expanded="true"] {
-  color: var(--red);
+  color: var(--accent);
 }
 
 .faq-toggle {
@@ -248,7 +248,7 @@ body {
 
 .faq-question button[aria-expanded="true"] .faq-toggle {
   transform: rotate(180deg);
-  color: var(--red);
+  color: var(--accent);
 }
 
 .faq-answer p {
@@ -261,7 +261,7 @@ body {
 /* ---------- Footer ---------- */
 
 .footer {
-  background: #fafafa;
+  background: #050505;
   border-top: 1px solid var(--border);
   padding: 2.5rem 1.25rem 3rem;
   text-align: center;
@@ -276,11 +276,11 @@ body {
 .trustpilot-box {
   background: var(--card-bg);
   border: 1.5px solid var(--border);
-  border-radius: 14px;
+  border-radius: 0;
   max-width: 20rem;
   margin: 1.25rem auto;
   padding: 1.5rem 1rem;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  box-shadow: none;
 }
 
 .trustpilot-logo {
@@ -297,15 +297,15 @@ body {
   width: 1.4rem;
   height: 1.4rem;
   background: var(--tp-green);
-  color: #fff;
-  border-radius: 4px;
+  color: #000;
+  border-radius: 0;
   font-size: 13px;
 }
 
 .trustpilot-name {
   font-size: 18px;
   font-weight: 700;
-  color: #333333;
+  color: var(--text);
 }
 
 .trustpilot-stars {
